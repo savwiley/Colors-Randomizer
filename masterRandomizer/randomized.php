@@ -7,6 +7,7 @@ include("$header");
 <?php
 $cards = "";
 echo '<textarea rows="10" cols="65">';
+	/* ALL */
 	for($i=1; $i<=(int)$_POST['allCards']; $i++) {
 		$randtype = 'all';
 		ob_start();
@@ -17,6 +18,7 @@ echo '<textarea rows="10" cols="65">';
 		echo ".$ext\" />";
 		$cards .= ", $card";
 	}
+	/* SPECIAL */
 	for($i=1; $i<=(int)$_POST['spCards']; $i++) {
 		$randtype = 'special';
 		ob_start();
@@ -27,6 +29,7 @@ echo '<textarea rows="10" cols="65">';
 		echo ".$ext\" />";
 		$cards .= ", $card";
 	}
+	/* COLORS */
 	for($i=1; $i<=(int)$_POST['redCards']; $i++) {
 		$randtype = 'red';
 		ob_start();
@@ -107,6 +110,7 @@ echo '<textarea rows="10" cols="65">';
 		echo ".$ext\" />";
 		$cards .= ", $card";
 	}
+	/* NEW */
 	for($i=1; $i<=(int)$_POST['newCards']; $i++) {
 		$randtype = 'new';
 		ob_start();
@@ -117,6 +121,7 @@ echo '<textarea rows="10" cols="65">';
 		echo ".$ext\" />";
 		$cards .= ", $card";
 	}
+	/* CRAYONS */
 	$red = 0;
 	$orange = 0;
 	$yellow = 0;

@@ -61,6 +61,14 @@ include("$header");
       }
     }
     //crayons
+    $red = 0;
+    $orange = 0;
+    $yellow = 0;
+    $green = 0;
+    $blue = 0;
+    $purple = 0;
+    $brown = 0;
+    $gray = 0;
     for($i=1; $i<=$allLevels; $i++) {
       $randtype = 'all';
       $crayon = rand(1, 8);
@@ -68,21 +76,69 @@ include("$header");
       echo "$crayon";
       echo ".$ext\" />";
       if ($crayon == 1) {
-        $cards .= ", red crayon";
+        ++$red;
       } elseif ($crayon == 2) {
-        $cards .= ", orange crayon";
+        ++$orange;
       } elseif ($crayon == 3) {
-        $cards .= ", yellow crayon";
+        ++$yellow;
       } elseif ($crayon == 4) {
-        $cards .= ", green crayon";
+        ++$green;
       } elseif ($crayon == 5) {
-        $cards .= ", blue crayon";
+        ++$blue;
       } elseif ($crayon == 6) {
-        $cards .= ", purple crayon";
+        ++$purple;
       } elseif ($crayon == 7) {
-        $cards .= ", brown crayon";
+        ++$brown;
       } else {
-        $cards .= ", gray crayon";
+        ++$gray;
+      }
+    }
+    if ($red > 0) {
+      $cards .= ", $red red crayon";
+      if ($red > 1) {
+        $cards .= "s";
+      }
+    }
+    if ($orange > 0) {
+      $cards .= ", $orange orange crayon";
+      if ($orange > 1) {
+        $cards .= "s";
+      }
+    }
+    if ($yellow > 0) {
+      $cards .= ", $yellow yellow crayon";
+      if ($yellow > 1) {
+        $cards .= "s";
+      }
+    }
+    if ($green > 0) {
+      $cards .= ", $green green crayon";
+      if ($green > 1) {
+        $cards .= "s";
+      }
+    }
+    if ($blue > 0) {
+      $cards .= ", $blue blue crayon";
+      if ($blue > 1) {
+        $cards .= "s";
+      }
+    }
+    if ($purple > 0) {
+      $cards .= ", $purple purple crayon";
+      if ($purple > 1) {
+        $cards .= "s";
+      }
+    }
+    if ($brown > 0) {
+      $cards .= ", $brown brown crayon";
+      if ($brown > 1) {
+        $cards .= "s";
+      }
+    }
+    if ($gray > 0) {
+      $cards .= ", $gray gray crayon";
+      if ($gray > 1) {
+        $cards .= "s";
       }
     }
     echo '<br /><br /><br />';
